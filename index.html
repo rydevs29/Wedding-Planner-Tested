@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOWS - AI Wedding Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        <header class="glass-card animate-slide-down">
+            <h1>💍 VOWS <span>Intelligence</span></h1>
+            <p>Implementasi Machine Learning untuk Perencanaan Pernikahan</p>
+        </header>
+
+        <div class="grid-layout">
+            <section class="glass-card animate-fade-in delay-1">
+                <div class="badge">Supervised Learning</div>
+                <h2>Prediksi Budget AI</h2>
+                <p class="desc">Memprediksi biaya berdasarkan pola data historis.</p>
+                <div class="input-group">
+                    <label>Jumlah Tamu</label>
+                    <input type="number" id="guestCount" placeholder="Contoh: 300">
+                </div>
+                <div class="input-group">
+                    <label>Tema Pernikahan</label>
+                    <select id="themeSelect">
+                        <option value="15000000">Minimalist (Rp 15 Jt Base)</option>
+                        <option value="35000000">Garden Party (Rp 35 Jt Base)</option>
+                        <option value="75000000">Luxury Ballroom (Rp 75 Jt Base)</option>
+                    </select>
+                </div>
+                <button onclick="predictBudget()">Hitung Prediksi</button>
+                <div id="budgetResult" class="result-box"></div>
+            </section>
+
+            <section class="glass-card animate-fade-in delay-2">
+                <div class="badge badge-blue">Smart Negotiation</div>
+                <h2>Vendor Negosiasi</h2>
+                <p class="desc">Latih mental menawar harga gedung (Harga Asli: Rp 50 Juta).</p>
+                <div class="input-group">
+                    <label>Tawaran Anda (Rp)</label>
+                    <input type="number" id="negoInput" placeholder="Contoh: 40000000">
+                </div>
+                <button onclick="startNego()" class="btn-alt">Ajukan Penawaran</button>
+                <div id="negoResult" class="result-box"></div>
+            </section>
+
+            <section class="glass-card animate-fade-in delay-3" style="grid-column: 1 / -1;">
+                <div class="badge badge-purple">Unsupervised Learning</div>
+                <h2>Auto-Clustering Tamu</h2>
+                <p class="desc">Sistem AI membagi tamu ke dalam meja secara otomatis berdasarkan usia dan relasi.</p>
+                <button onclick="clusterGuests()" class="btn-full">Jalankan Algoritma Clustering</button>
+                <div id="clusterResult" class="result-box flex-result"></div>
+            </section>
+        </div>
+
+        <footer class="glass-card animate-slide-up delay-4">
+            <h3>👨‍💻 Tim Pengembang</h3>
+            <div class="team-grid">
+                <div class="team-member">1. Rifqy (Ketua/Lead Dev)</div>
+                <div class="team-member">2. [Nama Anggota 2]</div>
+                <div class="team-member">3. [Nama Anggota 3]</div>
+                <div class="team-member">4. [Nama Anggota 4]</div>
+                <div class="team-member">5. [Nama Anggota 5]</div>
+                <div class="team-member">6. [Nama Anggota 6]</div>
+                <div class="team-member">7. [Nama Anggota 7]</div>
+                <div class="team-member">8. [Nama Anggota 8]</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
